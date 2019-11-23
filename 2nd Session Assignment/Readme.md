@@ -1,4 +1,12 @@
-1. Logs of 20 Epochs for a model of 14,535 Parameters:
+1. The result of model.evaluate (on test data) : 
+  [0.019479754745168613, 0.9942]
+  
+2. Strategy to achieve ~0.9942 score with <15K Parameters
+  - Increased the dropout percentage a bit.
+  - Decreased the Number of filters used in a few layers.
+  - Tried changing the epoch size but no impact. 20 was giving good accuracy.
+
+3. Logs of 20 Epochs for a model of 14,535 Parameters:
 
 Train on 60000 samples, validate on 10000 samples
 Epoch 1/20
@@ -83,11 +91,3 @@ Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
 60000/60000 [==============================] - 9s 143us/step - loss: 0.2252 - acc: 0.8816 - val_loss: 0.0195 - val_acc: 0.9942
 
 <keras.callbacks.History at 0x7fc971a35080>
-
-2. The result of model.evaluate (on test data) : 
-  [0.019479754745168613, 0.9942]
-  
-3. Strategy to achieve ~0.9942 score with <15K Parameters
-  - Increased the dropout percentage a bit.
-  - Decreased the Number of filters used in a few layers.
-  - Tried changing the epoch size but no impact. 20 was giving good accuracy.
